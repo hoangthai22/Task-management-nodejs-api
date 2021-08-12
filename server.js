@@ -3,7 +3,7 @@ import { connectDB, getDB } from "./src/config/mongodb.js";
 import cors from "cors";
 import { apiV1 } from "./src/routes/v1/index.js";
 const port = 5000;
-
+const port = process.env.PORT || 3000;
 connectDB()
   .then(() => {
     console.log("Connected successfully to database server");
